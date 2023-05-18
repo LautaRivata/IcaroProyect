@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-/* GET home page. */
+/* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('Direccion Index, Metodo: GET');
+  res.send('Direccion Carrito, Metodo: GET');
 });
 
 module.exports = router;
