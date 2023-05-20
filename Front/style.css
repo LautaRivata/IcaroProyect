@@ -20,57 +20,52 @@
 	--otro--dos: #267da0;
 	--otro--tres: #a9d6e5;
 }
+body {
+	background: var(--color--fondo);
+}
 
 .contenedor {
 	background: #ccc;
-	width:95%;
-
+	width:100%;
 	margin:auto;
 	min-height: 100vh;
 
 	/* Flexbox */
 	display:flex;
 	flex-flow:row wrap;
-}
-
-body {
-	background: var(--color--fondo);
-
-	/* display: grid;
-	min-height: 100vh;
-	grid-template-rows: auto 1fr auto; */
+	flex-direction:column;
 }
 
 header {
 	background:var(--otro--dos);
 	width:100%;
-	padding:5px;
 	height: 60px;
-
 
 	/* Flexbox */
 	display: flex;
-	justify-content:space-between;
+	justify-content:space-around;
 	align-items:center;
-	flex-direction:row;
 	flex-wrap:wrap;
+	flex-direction:column;
 }
 
 header .logo {
+	width: 30%;
 	color:#fff;
 	font-size:30px;
+	text-align: center;	
 }
 
 header .logo img {
-	width:50px;
-	vertical-align: top;
+	height: 50px;
+	vertical-align: center;
 }
 
 header .logo a {
 	display: none;
 	color:#fff;
 	text-decoration: none;
-	line-height:50px;
+	/* line-height:50px; */
 }
 
 header nav {
@@ -88,7 +83,6 @@ header nav a {
 	font-size: 1.2rem;
 	text-align: center;
 	text-decoration: none;
-	padding:10px;
 
 	/* Flexbox */
 	flex-grow:1;
@@ -100,9 +94,9 @@ header nav a:hover {
 
 .main {
 	background: #fff;
-	padding:20px;
+	padding:5px;
 
-	flex:1 1 70%;
+	flex:1 1 70%; 
 	/*flex:1;*/
 }
 
@@ -122,14 +116,14 @@ header nav a:hover {
 footer {
 	background:var(--otro--dos);
 	width: 100%;
-	padding:20px;
+	padding:5px;
 	
 
 	/* Flexbox */
 	display: flex;
 	flex-wrap:wrap;
-	justify-content:space-between;
 	align-self: flex-end;
+	justify-content:space-around;
 }
 
 footer .links {
@@ -169,41 +163,5 @@ footer .social a {
 	display: inline-block;
 }
 
-@media screen and (max-width: 800px) {
-	.contenedor {
-		flex-direction:column;
-	}
 
-	header {
-		flex-direction:column;
-		padding:0;
-	}
-
-	header .logo {
-		margin:20px 0;
-	}
-
-	header nav {
-		width: 100%;
-	}
-
-	aside {
-		flex-direction:row;
-		flex:0;
-	}
-
-	aside .widget {
-		flex-grow:1;
-	}
-}
-
-@media screen and (max-width: 600px) {
-	aside {
-		flex-direction:column;
-	}
-
-	footer {
-		justify-content:space-around;
-	}
-}
 
