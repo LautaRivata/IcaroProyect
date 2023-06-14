@@ -1,5 +1,8 @@
 # IcaroProyect
 
 Inicializacion del Proyecto
-==> Sprint III
+
+==> Sprint II "Front"
+
+==> Sprint III "Back"
 
