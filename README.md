@@ -1,6 +1,6 @@
 # IcaroProyect
 
-Inicializacion del Proyecto
+Entrega Primer Etapa.
 
 ==> Sprint II "Front"
 
