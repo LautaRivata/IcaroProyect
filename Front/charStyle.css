@@ -107,6 +107,7 @@ main{
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .article{
@@ -158,30 +159,24 @@ main{
 }
 
 
-
-
-
-
 footer {
 	background:var(--otro--dos);
-
 	padding: 5px;
 
 	/* Flexbox */
 	display: flex;
 	flex-wrap: wrap;
-
 	justify-content:space-around;
 }
 
+
+/* No estan definidos los liks */
+/* 
 footer .links {
 	display: flex;
 	flex-wrap:wrap;
 	justify-content:space-between;
 }
-
-/* No estan definidos los liks */
-/* 
 footer .links a {
 	flex-grow:1;
 	color:#fff;
