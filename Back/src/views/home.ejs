@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%-include('./partials/head', {"css": ["header", "home", "footer"]})%>
+
+<body>
+
+    <%-include('./partials/header')%>
+    <main>
+        <div class="banner">Hero Banner</div>
+        <br>
+        <div class="productos">
+            <h2>Listado De Productos</h2>
+            <article>
+                <div class="card">
+                    <p>Titulo</p>
+                    <img src="../../public/images/Auto.jpeg" alt="Imagen">
+                    <div>
+                        <p>Descripcion</p>
+                        <p>Precio</p>
+                        <button type="button">Ver Producto</button>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="card">
+                    <p>Titulo</p>
+                    <img src="../../public/images/Auto2.png" alt="IMAGEN PRODUCTO">
+                    <div>
+                        <p>Descripcion</p>
+                        <p>Precio</p>
+                        <button type="button">Ver Producto</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+
+    </main>
+    <%-include('./partials/footer')%>
+   
+</body>
+</html>

@@ -1,0 +1,88 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: content-box;
+	font-family: "Roboto";
+}
+
+:root{
+	--color--uno: #03045E;
+	--color--dos: #0077b6;
+	--color--tres: #00b4b8;
+	--color--cuatro: #90e0ef;
+	--color--cinco: #caf0f8;
+	--color--fondo: #f5f3f5;
+	--otro--uno: #0124a4;
+	--otro--dos: #267da0;
+	--otro--tres: #a9d6e5;
+}
+
+body {
+	background: var(--color--fondo);
+}
+
+.contenedor {
+	background: #ccc;
+	width:100%;
+	margin:auto;
+	min-height: 100vh;
+
+	/* Flexbox */
+	display:flex;
+	flex-flow:row wrap;
+	flex-direction:column;
+}
+
+
+
+main {
+	padding: 5px;
+	/* display: flex;
+	flex-wrap:wrap;
+	flex-direction: column; */
+	flex:1;
+}
+
+.banner{
+	display: none;
+	background-color: #fff;
+	width: 100%;
+	min-height: 150px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+}
+
+.productos{
+	width: 90%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+article{
+	padding: 10px;
+	height: 220px;
+	width: 150px;
+}
+
+article img{
+	width: 140px;
+	height: 120px;
+	padding: 5px;
+	object-fit: contain;
+}
+
+article p{
+	text-align: left;
+}
+
+article button{
+	align-self: left;
+	cursor: pointer;
+	background-color: var(--otro--tres);
+	
+}
