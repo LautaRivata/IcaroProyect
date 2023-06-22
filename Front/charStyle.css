@@ -158,6 +158,25 @@ main{
 
 }
 
+.inferior{
+    width: 40%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    flex-wrap: wrap;
+}
+
+.inferior2{
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    /* align-content: center; */
+    justify-content: space-around;
+    align-items: center;
+
+}
+
 
 footer {
 	background:var(--otro--dos);

@@ -36,8 +36,6 @@ body {
 	flex-direction:column;
 }
 
-
-
 main {
 	padding: 5px;
 	/* display: flex;
@@ -53,7 +51,6 @@ main {
 	min-height: 150px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-
 }
 
 .productos{
