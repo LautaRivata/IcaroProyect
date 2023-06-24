@@ -6,9 +6,9 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 
 const indexRouter = require('./routes/index');
-const detalleRouter = require('./routes/detalle');
+const detailRouter = require('./routes/detailProducts');
 const loginRouter = require('./routes/login');
-const carritoRouter = require('./routes/carrito');
+const chartRouter = require('./routes/chart');
 const registerRouter = require('./routes/register');
 
 const app = express();
@@ -26,9 +26,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/detalleProducto', detalleRouter);
+app.use('/detailProducts', detailRouter);
 app.use('/login', loginRouter);
-app.use('/carrito', carritoRouter);
+app.use('/chart', chartRouter);
 app.use('/register', registerRouter);
 
 

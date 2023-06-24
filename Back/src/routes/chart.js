@@ -3,7 +3,7 @@ const router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('Direccion Carrito, Metodo: GET');
+  res.render('chart');
 });
 
 module.exports = router;

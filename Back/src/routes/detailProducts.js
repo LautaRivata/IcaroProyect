@@ -3,7 +3,7 @@ const router = express.Router();
 
 /* GET Products listing. */
 router.get('/', function(req, res, next) {
-  res.send('Direccion Detalle, Metodo: GET');
+  res.render('detailProducts');
 });
 
 module.exports = router;
