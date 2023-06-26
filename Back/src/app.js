@@ -4,6 +4,8 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
+const session = require('express-session');
+const cors = require('cors');
 
 const indexRouter = require('./routes/index');
 const detailRouter = require('./routes/detailProducts');
@@ -12,18 +14,26 @@ const chartRouter = require('./routes/chart');
 const registerRouter = require('./routes/register');
 
 const app = express();
+const unDia = 1000 * 60 * 60 * 24;
+app.use(cors())
 
 // view engine setup
-app.set('views', path.resolve(__dirname, './views'));
+app.set('views', path.join(__dirname,'views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(session({
+  secret: "1q2w3e4r",
+  saveUninitialized: true,
+  cookie: { maxAge: unDia },
+  resave: false
+}))
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname,'..', 'public')));
 
 app.use('/', indexRouter);
 app.use('/detailProducts', detailRouter);
