@@ -1,9 +1,9 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
+const { getHome } = require("../controllers/index");
+
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('home');
-});
+router.get("/", getHome);
 
 module.exports = router;

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%-include("./partials/head", {"css":["header", "home", "footer"]})%>
+  <%-include("./partials/head", {"css":["header", "home" , "footer" ]})%>
 
   <body>
     <%-include('./partials/header')%>
@@ -9,18 +9,21 @@
       <br />
       <div class="productos">
         <h2>Listado De Productos</h2>
+        <%for (let i=0; i < data.length; i++){%>
         <article>
           <div class="card">
-            <p>Titulo</p>
-            <img src="images/Auto.jpeg" alt="Imagen" />
+            <p><%= data[i].nombre %></p>
+            <img src="<%=data[i].imagen %>" alt="Imagen" />
             <div>
-              <p>Descripcion</p>
-              <p>Precio</p>
+              <p><%= data[i].descripcion %></p>
+              <p><%= data[i].precio %></p>
               <button type="button">Ver Producto</button>
             </div>
           </div>
         </article>
-        <article>
+        <%}%>
+
+        <!-- <article>
           <div class="card">
             <p>Titulo</p>
             <img src="images/Auto2.png" alt="IMAGEN PRODUCTO" />
@@ -30,7 +33,7 @@
               <button type="button">Ver Producto</button>
             </div>
           </div>
-        </article>
+        </article> -->
       </div>
     </main>
     <%-include('./partials/footer')%>
