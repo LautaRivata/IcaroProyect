@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+  <%-include("./partials/head", {"css":["header", "login", "footer"]})%>
 
-<%-include("./partials/head", {"css":["header", "home", "footer"]})%>
-
-<body>
-
+  <body>
     <%-include('./partials/header')%>
     <main>
-
-
-        
+      <div class="card">
+        <form method="POST" action="/users/login">
+          <label for="email">Email</label><br />
+          <input id="user" type="text" name="email" /><br />
+          <label for="password">Password</label><br />
+          <input id="password" type="password" name="password" /><br />
+          <br />
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
     </main>
     <%-include('./partials/footer')%>
-</body>
+  </body>
 </html>

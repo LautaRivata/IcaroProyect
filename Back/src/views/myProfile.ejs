@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include("./partials/head", {"css":["header", "myProfile", "footer"]})%>
+
+  <body>
+    <%-include('./partials/header')%>
+    <main>
+      <div>
+        <h2>Bienvenido <%= user.name %></h2>
+        <h3>Datos de Usuarios</h3>
+        <table>
+          <tr>
+            <th>id</th>
+            <th>Nombre</th>
+            <th>Mail</th>
+          </tr>
+          <tr>
+            <td>user.id</td>
+            <td>user.name</td>
+            <td>user.mail</td>
+          </tr>
+        </table>
+      </div>
+    </main>
+    <%-include('./partials/footer')%>
+  </body>
+</html>
