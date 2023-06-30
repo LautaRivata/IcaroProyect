@@ -17,7 +17,9 @@
             <div>
               <p><%= data[i].descripcion %></p>
               <p><%= data[i].precio %></p>
-              <button type="button">Ver Producto</button>
+              <button>
+                <a href="/detailProducts/<%=data[i].id%>">Ver Producto</a>
+              </button>
             </div>
           </div>
         </article>

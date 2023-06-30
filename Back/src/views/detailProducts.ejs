@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%-include('./partials/head', {"css": ["header", "detailProducts",
-  "footer"]})%>
+  <%-include("./partials/head", {"css":["header", "detailProducts" , "footer"
+  ]})%>
+
   <body>
-    <%-include('./partials/header')%>
+    <%-include("./partials/header")%>
     <main>
       <div class="producto">
         <h2><%= data.nombre %></h2>
@@ -11,10 +12,10 @@
         <div>
           <p><%= data.descripcion %></p>
           <p><%= data.precio %></p>
-          <button type="button">Compra</button>
+          <button type="button">Comprar</button>
         </div>
       </div>
     </main>
-    <%-include('./partials/footer')%>
+    <%-include("./partials/footer")%>
   </body>
 </html>

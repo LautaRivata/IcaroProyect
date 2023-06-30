@@ -1,10 +1,17 @@
 const { getProduct } = require("../services/products");
 
 exports.getDetailProducts = function (req, res, next) {
-  const data = getProduct(3);
-  if (data == false) {
-    res.send("error 404 Object Not Found");
+  const { id } = req.params;
+  let data;
+  if (id) {
+    data = getProduct(parseInt(id));
+    if (data) {
+      res.render("detailProducts", { data });
+    } else {
+      console.log("error");
+      // next(new Error("Product not found"));
+    }
   } else {
-    res.render("detailProducts", { data });
+    res.redirect("/");
   }
 };
