@@ -5,7 +5,7 @@ const {
 } = require("../services/users");
 
 exports.getLoginController = function (req, res, next) {
-  res.send("Direccion Login, Metodo: GET");
+  res.render("login");
 };
 
 exports.postLoginController = function (req, res, next) {

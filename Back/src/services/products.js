@@ -14,8 +14,18 @@ function readDB() {
 }
 
 function getAllProducts() {
-  dataParseada = readDB();
+  const dataParseada = readDB();
   return dataParseada;
 }
 
-module.exports = { getAllProducts };
+function getProduct(id) {
+  const dataParseada = readDB();
+  for (let i = 0; i < dataParseada.length; i++) {
+    if (dataParseada[i].id == id) {
+      return dataParseada[i];
+    }
+  }
+  return false;
+}
+
+module.exports = { getAllProducts, getProduct };

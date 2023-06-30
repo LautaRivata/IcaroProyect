@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%-include('./partials/head', {"css": ["header", "detailProducts", "footer"]})%>
-<body>
+  <%-include('./partials/head', {"css": ["header", "detailProducts",
+  "footer"]})%>
+  <body>
     <%-include('./partials/header')%>
     <main>
-        <div class="producto">
-            <h2>Nombre Producto</h2>
-            <img src="images/Auto2.png" alt="IMAGEN PRODUCTO">
-            <div>
-                <p>Descripcion</p>
-                <p>Precio</p>
-                <button type="button">Comprar</button>
-            </div>
+      <div class="producto">
+        <h2><%= data.nombre %></h2>
+        <img src="<%=data.imagen %>" alt="Imagen" />
+        <div>
+          <p><%= data.descripcion %></p>
+          <p><%= data.precio %></p>
+          <button type="button">Compra</button>
         </div>
+      </div>
     </main>
     <%-include('./partials/footer')%>
-</body>
+  </body>
 </html>
-
-
