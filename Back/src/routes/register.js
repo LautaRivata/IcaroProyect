@@ -1,9 +1,11 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
+const { getRegister, postRegister } = require("../controllers/register");
+
 /* GET Products listing. */
-router.get('/', function(req, res, next) {
-  res.send('Direccion Register, Metodo: GET');
-});
+router.get("/", getRegister);
+
+router.post("/", postRegister);
 
 module.exports = router;

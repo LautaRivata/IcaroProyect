@@ -12,10 +12,10 @@ body {
 
 main {
   padding: 5px;
-  /* display: flex;
-	flex-wrap:wrap;
-	flex-direction: column; */
   flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .banner {

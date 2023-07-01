@@ -1,14 +1,14 @@
 [
   {
-    "id": 0,
+    "id": 2,
     "nombre": "Tupak",
-    "email": "User@gmail.com",
-    "password": "elpassword"
+    "email": "Tupak@gmail.com",
+    "password": "$2b$10$II5FB477e40DZFDP4xKxbu.7Hgocl0QHSacbmWwGo2LrlWtziZHoG"
   },
   {
     "id": 1,
     "nombre": "Tiberio",
-    "email": "tiberio@mail.com.ar",
-    "password": "elTiberio"
+    "email": "Tiberio@gmail.com",
+    "password": "$2b$10$lWFeRkQGovmDqw8Xw1LZkeq7HWABCMKDzGrAzn//PA.BqxdR2cCPO"
   }
 ]

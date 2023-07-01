@@ -16,8 +16,7 @@ function readDB() {
 function createUsers(user) {
   try {
     const filePath = path.join(__dirname, "..", "..", "db/usersDB.json"); // Obtengo la ruta completa
-    // const data = getAllProducts();
-    const data = [];
+    const data = readDB();
     data.push(user);
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
     return true;
@@ -27,7 +26,7 @@ function createUsers(user) {
   }
 }
 
-function findUserByUsername(email) {
+function findUserByUsermail(email) {
   dataParseada = readDB();
   if (dataParseada.length) {
     const savedUser = dataParseada.filter((user) => user.email === email);
@@ -37,6 +36,7 @@ function findUserByUsername(email) {
   return false;
 }
 
+/*revisar, esta dando siempre el ID 2*/
 function findIdDisponible() {
   dataParseada = readDB();
   for (let i = 0; i < dataParseada.lenght; i++) {
@@ -47,4 +47,4 @@ function findIdDisponible() {
   return dataParseada.length + 1;
 }
 
-module.exports = { createUsers, findUserByUsername, findIdDisponible };
+module.exports = { createUsers, findUserByUsermail, findIdDisponible };
