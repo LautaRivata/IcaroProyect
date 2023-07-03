@@ -5,11 +5,11 @@
   </div>
 
   <nav>
-    <a href="/detailProducts">Detail Product</a>
+    <a href="/detailProducts/1">Detail Product</a>
     <a href="/chart">Carrito</a>
-    <% if(user) {%>
+    <% if(user){%>
     <p>@<%= user.nombre %></p>
-    <a href="/logout">Logout</a>
+    <a href="/login/logout">Logout</a>
     <%}else{%>
     <a href="/login">Login</a>
     <a href="/register">Register</a>

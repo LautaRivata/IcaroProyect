@@ -35,7 +35,6 @@ exports.getMyProfile = function (req, res, next) {
 
 exports.getLogout = (req, res, next) => {
   console.log("Session ", req.session);
-  req.session.destroy(function (err) {
-    res.redirect("/users/login");
-  });
+  req.session.destroy();
+  res.redirect("/");
 };

@@ -2,7 +2,7 @@ const bcrypt = require("bcrypt");
 const { createUsers, findIdDisponible } = require("../services/users");
 
 exports.getRegister = function (req, res, next) {
-  res.render("register");
+  res.render("register", { user: false });
 };
 
 exports.postRegister = function (req, res, next) {
